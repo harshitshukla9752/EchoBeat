@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artist Profile - My Song Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+        .album-cover {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+
+    <!-- Navbar -->
+    <nav class="bg-gray-800 p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-xl font-bold text-yellow-400">My Song Website</a>
+            <div class="space-x-4">
+                <a href="browse.html" class="bg-gray-700 text-gray-300 px-4 py-2 rounded-full font-semibold hover:text-yellow-400 transition duration-300">Browse</a>
+                <a href="profile.html" class="bg-gray-700 text-gray-300 px-4 py-2 rounded-full font-semibold hover:text-yellow-400 transition duration-300">Profile</a>
+                <a href="logout.html" class="bg-gray-700 text-gray-300 px-4 py-2 rounded-full font-semibold hover:text-yellow-400 transition duration-300">Logout</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Artist Profile Container -->
+    <div class="container mx-auto py-16 px-4">
+        <!-- Artist Profile Section -->
+        <div class="bg-gray-800 p-8 rounded-lg shadow-lg">
+            <div class="flex items-center mb-8">
+                <img src="https://via.placeholder.com/150" alt="Artist Picture" class="profile-pic mr-6">
+                <div>
+                    <h1 class="text-3xl font-bold mb-2">Artist Name</h1>
+                    <p class="text-gray-400 mb-4">Genre: Rock</p>
+                    <p class="text-gray-400 mb-6">Bio: This is a brief biography of the artist. It includes their background, achievements, and other relevant information.</p>
+                    <a href="edit-profile.html" class="bg-yellow-400 text-gray-900 px-4 py-2 rounded-full font-semibold hover:bg-yellow-500 transition duration-300">Edit Profile</a>
+                </div>
+            </div>
+
+            <!-- Music Section -->
+            <div class="mb-8">
+                <h2 class="text-2xl font-bold mb-4">Music</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Example Album Card -->
+                    <div class="bg-gray-700 p-4 rounded-lg shadow-lg">
+                        <img src="https://via.placeholder.com/200" alt="Album Cover" class="album-cover mb-4">
+                        <h3 class="text-xl font-semibold mb-2">Album Title</h3>
+                        <p class="text-gray-400 mb-4">Release Date: 2024-01-01</p>
+                        <a href="album-details.html" class="bg-yellow-400 text-gray-900 px-4 py-2 rounded-full font-semibold hover:bg-yellow-500 transition duration-300">View Album</a>
+                    </div>
+
+                    <!-- Repeat Album Card for more albums -->
+                </div>
+            </div>
+
+            <!-- Recent Tracks Section -->
+            <div>
+                <h2 class="text-2xl font-bold mb-4">Recent Tracks</h2>
+                <ul class="space-y-4">
+                    <!-- Example Track -->
+                    <li class="bg-gray-700 p-4 rounded-lg shadow-lg">
+                        <h3 class="text-xl font-semibold mb-2">Track Title</h3>
+                        <p class="text-gray-400 mb-2">Album: Album Title</p>
+                        <p class="text-gray-400">Duration: 3:45</p>
+                        <a href="track-details.html" class="bg-yellow-400 text-gray-900 px-4 py-2 rounded-full font-semibold hover:bg-yellow-500 transition duration-300">Play Track</a>
+                    </li>
+
+                    <!-- Repeat Track Item for more tracks -->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 py-6 mt-8">
+        <div class="container mx-auto text-center text-gray-400">
+            <p>&copy; 2024 My Song Website. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

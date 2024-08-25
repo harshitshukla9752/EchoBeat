@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile - My Song Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .profile-pic {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+
+    <!-- Navbar -->
+    <nav class="bg-gray-800 p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-xl font-bold text-yellow-400">My Song Website</a>
+            <div class="space-x-4">
+                <a href="index.html" class="bg-gray-700 text-gray-300 px-4 py-2 rounded-full font-semibold hover:text-yellow-400 transition duration-300">Home</a>
+                <a href="browse.html" class="bg-gray-700 text-gray-300 px-4 py-2 rounded-full font-semibold hover:text-yellow-400 transition duration-300">Browse</a>
+                <a href="about.html" class="bg-gray-700 text-gray-300 px-4 py-2 rounded-full font-semibold hover:text-yellow-400 transition duration-300">About</a>
+                <a href="contact.html" class="bg-gray-700 text-gray-300 px-4 py-2 rounded-full font-semibold hover:text-yellow-400 transition duration-300">Contact</a>
+                <a href="logout.html" class="bg-gray-700 text-gray-300 px-4 py-2 rounded-full font-semibold hover:text-yellow-400 transition duration-300">Logout</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Edit Profile Container -->
+    <div class="container mx-auto py-16 px-4">
+        <div class="bg-gray-800 p-8 rounded-lg shadow-lg w-full max-w-md mx-auto">
+            <h1 class="text-3xl font-bold mb-6 text-center">Edit Profile</h1>
+            
+            <!-- Profile Picture Section -->
+            <div class="flex flex-col items-center mb-8">
+                <img src="https://via.placeholder.com/100" alt="Profile Picture" class="profile-pic mb-4">
+                <input type="file" id="profile-pic" name="profile-pic" class="text-gray-300 mb-4">
+                <p class="text-gray-400 text-sm">Upload a new profile picture (JPG, PNG, or GIF, max 2MB).</p>
+            </div>
+            
+            <!-- Profile Form -->
+            <form>
+                <div class="mb-4">
+                    <label for="name" class="block text-gray-300 mb-2">Name</label>
+                    <input type="text" id="name" name="name" class="w-full p-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500" placeholder="Artist Name">
+                </div>
+                <div class="mb-4">
+                    <label for="genre" class="block text-gray-300 mb-2">Genre</label>
+                    <input type="text" id="genre" name="genre" class="w-full p-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500" placeholder="Genre">
+                </div>
+                <div class="mb-4">
+                    <label for="bio" class="block text-gray-300 mb-2">Biography</label>
+                    <textarea id="bio" name="bio" class="w-full p-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500" rows="4" placeholder="Brief Biography"></textarea>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="bg-yellow-400 text-gray-900 px-6 py-3 rounded-full font-semibold hover:bg-yellow-500 transition duration-300">Save Changes</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 py-6">
+        <div class="container mx-auto text-center text-gray-400">
+            <p>&copy; 2024 My Song Website. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

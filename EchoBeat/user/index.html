@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard - My Song Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .card {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .search-input {
+            background-color: #1f2937; /* Dark background for input */
+        }
+        .search-input::placeholder {
+            color: #9ca3af; /* Light color for placeholder text */
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+
+    <!-- Navbar -->
+    <nav class="bg-gray-800 p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-xl font-bold text-yellow-400">My Song Website</a>
+            <div class="space-x-4">
+                <a href="#" class="bg-gray-700 text-gray-300 px-4 py-2 rounded-full font-semibold hover:text-yellow-400 transition duration-300">Dashboard</a>
+                <a href="#" class="bg-gray-700 text-gray-300 px-4 py-2 rounded-full font-semibold hover:text-yellow-400 transition duration-300">Profile</a>
+                <a href="#" class="bg-gray-700 text-gray-300 px-4 py-2 rounded-full font-semibold hover:text-yellow-400 transition duration-300">Logout</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- User Dashboard Container -->
+    <div class="container mx-auto py-16 px-4">
+        <!-- Search Bar -->
+        <div class="mb-8 flex justify-center">
+            <input type="text" placeholder="Search for songs..." class="search-input w-full max-w-md p-3 rounded-lg border border-gray-600 text-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-500" />
+        </div>
+
+        <!-- Dashboard Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- My Songs Card -->
+            <div class="bg-gray-800 p-6 rounded-lg card">
+                <h2 class="text-xl font-semibold mb-4">My Songs</h2>
+                <p class="text-gray-400 mb-4">View and manage your uploaded songs. Add, edit, or delete tracks.</p>
+                <a href="my-songs.html" class="bg-yellow-400 text-gray-900 px-4 py-2 rounded-full font-semibold hover:bg-yellow-500 transition duration-300">Manage Songs</a>
+            </div>
+
+            <!-- Playlists Card -->
+            <div class="bg-gray-800 p-6 rounded-lg card">
+                <h2 class="text-xl font-semibold mb-4">Playlists</h2>
+                <p class="text-gray-400 mb-4">Create and manage your playlists. Organize your favorite tracks.</p>
+                <a href="playlists.html" class="bg-yellow-400 text-gray-900 px-4 py-2 rounded-full font-semibold hover:bg-yellow-500 transition duration-300">Manage Playlists</a>
+            </div>
+
+            <!-- Favorites Card -->
+            <div class="bg-gray-800 p-6 rounded-lg card">
+                <h2 class="text-xl font-semibold mb-4">Favorites</h2>
+                <p class="text-gray-400 mb-4">View your favorite songs and albums. Easily access your top tracks.</p>
+                <a href="favorites.html" class="bg-yellow-400 text-gray-900 px-4 py-2 rounded-full font-semibold hover:bg-yellow-500 transition duration-300">View Favorites</a>
+            </div>
+
+            <!-- Recent Activity Card -->
+            <div class="bg-gray-800 p-6 rounded-lg card">
+                <h2 class="text-xl font-semibold mb-4">Recent Activity</h2>
+                <p class="text-gray-400 mb-4">See your recent activities including song plays, uploads, and interactions.</p>
+                <a href="recent-activity.html" class="bg-yellow-400 text-gray-900 px-4 py-2 rounded-full font-semibold hover:bg-yellow-500 transition duration-300">View Activity</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 py-6 mt-8">
+        <div class="container mx-auto text-center text-gray-400">
+            <p>&copy; 2024 My Song Website. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artist Profile - My Song Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-white">
+
+    <!-- Navbar -->
+    <nav class="bg-gray-800 p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="home.html" class="text-xl font-bold text-yellow-400">My Song Website</a>
+            <div class="space-x-4">
+                <a href="home.html" class="bg-gray-700 text-gray-300 px-4 py-2 rounded-full font-semibold hover:text-yellow-400 transition duration-300">Home</a>
+                <a href="browse.html" class="bg-gray-700 text-gray-300 px-4 py-2 rounded-full font-semibold hover:text-yellow-400 transition duration-300">Browse</a>
+                <a href="about.html" class="bg-gray-700 text-gray-300 px-4 py-2 rounded-full font-semibold hover:text-yellow-400 transition duration-300">About</a>
+                <a href="contact.html" class="bg-gray-700 text-gray-300 px-4 py-2 rounded-full font-semibold hover:text-yellow-400 transition duration-300">Contact</a>
+                
+            </div>
+        </div>
+    </nav>
+
+    <!-- Artist Profile Container -->
+    <div class="container mx-auto py-16">
+        <div class="bg-gray-800 p-8 rounded-lg shadow-lg">
+            <div class="flex items-center mb-6">
+                <img src="https://via.placeholder.com/150" alt="Artist Picture" class="w-32 h-32 rounded-full mr-6">
+                <div>
+                    <h1 class="text-4xl font-bold mb-2">Artist Name</h1>
+                    <p class="text-yellow-400 text-lg mb-4">Genre: Pop</p>
+                    <p class="text-gray-300 mb-4">Bio: This is a brief biography of the artist. It includes information about their career, achievements, and other relevant details.</p>
+                    <a href="#" class="bg-yellow-400 text-gray-900 px-4 py-2 rounded-full font-semibold hover:bg-yellow-500">Follow</a>
+                </div>
+            </div>
+            
+            <!-- Discography -->
+            <div class="mt-8">
+                <h2 class="text-3xl font-bold mb-4">Discography</h2>
+                <ul class="space-y-4">
+                    <li>
+                        <a href="#" class="text-yellow-400 hover:underline">Album Title 1</a> - Release Date
+                    </li>
+                    <li>
+                        <a href="#" class="text-yellow-400 hover:underline">Album Title 2</a> - Release Date
+                    </li>
+                    <li>
+                        <a href="#" class="text-yellow-400 hover:underline">Album Title 3</a> - Release Date
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 py-6">
+        <div class="container mx-auto text-center text-gray-400">
+            <p>&copy; 2024 My Song Website. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

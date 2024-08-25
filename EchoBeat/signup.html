@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - My Song Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white flex items-center justify-center h-screen relative">
+
+    <!-- Back Button -->
+    <a href="home.html" class="back-button text-yellow-400 text-2xl hover:underline">&larr; Back to Home</a>
+
+    <!-- Signup Form -->
+    <div class="bg-gray-800 p-8 rounded-lg shadow-lg w-96">
+        <h2 class="text-3xl font-bold mb-6 text-center">Sign Up</h2>
+        <form id="signupForm">
+            <div class="mb-4">
+                <label for="name" class="block text-sm font-medium text-gray-300">Full Name</label>
+                <input type="text" id="name" name="name" class="w-full mt-2 p-3 rounded bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-yellow-400" placeholder="Enter your full name" required>
+            </div>
+            <div class="mb-4">
+                <label for="email" class="block text-sm font-medium text-gray-300">Email</label>
+                <input type="email" id="email" name="email" class="w-full mt-2 p-3 rounded bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-yellow-400" placeholder="Enter your email" required>
+            </div>
+            <div class="mb-6">
+                <label for="password" class="block text-sm font-medium text-gray-300">Password</label>
+                <input type="password" id="password" name="password" class="w-full mt-2 p-3 rounded bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-yellow-400" placeholder="Create a password" required>
+            </div>
+            <button type="submit" class="w-full bg-yellow-400 text-gray-900 py-3 rounded mt-6 font-semibold hover:bg-yellow-500">Sign Up</button>
+        </form>
+        <p class="text-sm text-gray-400 mt-4 text-center">Already have an account? <a href="login.html" class="text-yellow-400 hover:underline">Login</a></p>
+    </div>
+
+    <script>
+        document.getElementById('signupForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            try {
+                const response = await fetch('/api/users/signup', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ name, email, password })
+                });
+
+                const result = await response.json();
+                if (response.ok) {
+                    alert(result.message);
+                    window.location.href = 'login.html'; // Redirect to login page after successful signup
+                } else {
+                    alert('Signup failed: ' + result.message);
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('An error occurred while signing up. Please try again.');
+            }
+        });
+    </script>
+
+</body>
+</html>

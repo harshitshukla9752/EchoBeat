@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - My Song Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .card {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .profile-pic {
+            width: 40px;
+            height: 40px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+
+    <!-- Sidebar and Main Content Container -->
+    <div class="flex">
+        <!-- Sidebar -->
+        <aside class="w-64 bg-gray-800 h-screen p-6">
+            <h1 class="text-2xl font-bold text-yellow-400 mb-8">Admin Dashboard</h1>
+            <ul class="space-y-4">
+                <li><a href="admin-dashboard.html" class="block p-3 bg-gray-700 rounded-lg hover:bg-gray-600">Dashboard</a></li>
+                <li><a href="manage-users.html" class="block p-3 bg-gray-700 rounded-lg hover:bg-gray-600">Manage Users</a></li>
+                <li><a href="manage-artists.html" class="block p-3 bg-gray-700 rounded-lg hover:bg-gray-600">Manage Artists</a></li>
+                <li><a href="manage-songs.html" class="block p-3 bg-gray-700 rounded-lg hover:bg-gray-600">Manage Songs</a></li>
+                <li><a href="manage-albums.html" class="block p-3 bg-gray-700 rounded-lg hover:bg-gray-600">Manage Albums</a></li>
+                <li><a href="settings.html" class="block p-3 bg-gray-700 rounded-lg hover:bg-gray-600">Settings</a></li>
+                <li><a href="logout.html" class="block p-3 bg-gray-700 rounded-lg hover:bg-gray-600">Logout</a></li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 p-8">
+            <!-- Header -->
+            <div class="flex items-center justify-between mb-8">
+                <h1 class="text-3xl font-bold">Admin Dashboard</h1>
+                <div class="flex items-center space-x-4">
+                    <a href="profile.html" class="flex items-center text-gray-400 hover:text-yellow-400">
+                        <img src="https://via.placeholder.com/40" alt="Profile Picture" class="profile-pic mr-2">
+                        <span class="font-semibold">Profile</span>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Dashboard Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Users Card -->
+                <div class="bg-gray-800 p-6 rounded-lg card">
+                    <h2 class="text-xl font-semibold mb-4">Users</h2>
+                    <p class="text-gray-400 mb-4">Manage user accounts, view statistics, and more.</p>
+                    <a href="manage-users.html" class="bg-yellow-400 text-gray-900 px-4 py-2 rounded-full font-semibold hover:bg-yellow-500 transition duration-300">Manage Users</a>
+                </div>
+
+                <!-- Artists Card -->
+                <div class="bg-gray-800 p-6 rounded-lg card">
+                    <h2 class="text-xl font-semibold mb-4">Artists</h2>
+                    <p class="text-gray-400 mb-4">Manage artist profiles and view artist statistics.</p>
+                    <a href="manage-artists.html" class="bg-yellow-400 text-gray-900 px-4 py-2 rounded-full font-semibold hover:bg-yellow-500 transition duration-300">Manage Artists</a>
+                </div>
+
+                <!-- Songs Card -->
+                <div class="bg-gray-800 p-6 rounded-lg card">
+                    <h2 class="text-xl font-semibold mb-4">Songs</h2>
+                    <p class="text-gray-400 mb-4">Add, edit, or delete songs. View song statistics.</p>
+                    <a href="manage-songs.html" class="bg-yellow-400 text-gray-900 px-4 py-2 rounded-full font-semibold hover:bg-yellow-500 transition duration-300">Manage Songs</a>
+                </div>
+
+                <!-- Albums Card -->
+                <div class="bg-gray-800 p-6 rounded-lg card">
+                    <h2 class="text-xl font-semibold mb-4">Albums</h2>
+                    <p class="text-gray-400 mb-4">Add, edit, or delete albums. View album statistics.</p>
+                    <a href="manage-albums.html" class="bg-yellow-400 text-gray-900 px-4 py-2 rounded-full font-semibold hover:bg-yellow-500 transition duration-300">Manage Albums</a>
+                </div>
+
+                <!-- Settings Card -->
+                <div class="bg-gray-800 p-6 rounded-lg card">
+                    <h2 class="text-xl font-semibold mb-4">Settings</h2>
+                    <p class="text-gray-400 mb-4">Update site settings, manage permissions, and more.</p>
+                    <a href="settings.html" class="bg-yellow-400 text-gray-900 px-4 py-2 rounded-full font-semibold hover:bg-yellow-500 transition duration-300">Go to Settings</a>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 py-6 mt-8">
+        <div class="container mx-auto text-center text-gray-400">
+            <p>&copy; 2024 My Song Website. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
