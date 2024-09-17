@@ -1,0 +1,1 @@
+this is the frontend an dthe backend of my song website EchoBeat frontend is maked with HTML , and Tailwind framework and Backend is maked with JAVA Framework Spring boot in file "src" and it made in java and gradle groovy language and using nosql database MongoDB.
