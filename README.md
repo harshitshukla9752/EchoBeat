@@ -4,9 +4,9 @@
 
 ## 🚀 Overview
 
-EchoBeat ek Spotify-style **music streaming platform** hai jo secure backend APIs, playlists, user authentication, aur AWS deployment support karta hai. Iska backend **Java + Spring Boot** par build hai, jisme **JWT authentication**, **role-based access**, aur **MongoDB** ka use hota hai.
+EchoBeat is a Spotify‑style music streaming platform built using Java + Spring Boot, designed to deliver secure and scalable audio streaming services. It includes authentication, playlists, song management, and AWS-based media storage.
 
-Ye project real-world scalable backend architecture ko follow karta hai — backend interviews aur resume ke liye perfect.
+The project follows clean backend architecture and industry-level practices, making it an excellent fit for backend engineering portfolios and interviews.
 
 ---
 
@@ -75,7 +75,7 @@ cd EchoBeat
 ### 2️⃣ Install dependencies
 
 ```
-mvn clean install
+./gradlew build
 ```
 
 ### 3️⃣ Create `application.properties`
@@ -94,7 +94,7 @@ aws.s3.bucket=echobeat-bucket
 ### 4️⃣ Run the project
 
 ```
-mvn spring-boot:run
+./gradlew bootRun
 ```
 
 ---
